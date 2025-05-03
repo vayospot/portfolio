@@ -1,11 +1,23 @@
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+:root {
+  font-family: Geist, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+@layer base {
+  h2 {
+    @apply text-light text-xl font-medium;
+  }
+
+  p,
+  span,
+  li {
+    @apply text-light text-base font-thin;
+  }
+}
+
+@theme {
+  --color-dark: #0c0c0c;
+  --color-light: #eaeaea;
+  --color-accent: #ff4d4d;
 }
