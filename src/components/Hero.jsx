@@ -4,9 +4,32 @@ import {
   IoLogoTwitter,
   IoMdMail,
 } from "react-icons/io";
-import Button from "../components/Button";
+import Button from "./Button";
 
 function Hero() {
+  const SOCIALS = [
+    {
+      name: "Twitter",
+      icon: <IoLogoTwitter />,
+      url: "https://twitter.com/vayospot",
+    },
+    {
+      name: "Github",
+      icon: <IoLogoGithub />,
+      url: "https://github.com/vayospot",
+    },
+    {
+      name: "Linkedin",
+      icon: <IoLogoLinkedin />,
+      url: "https://linkedin.com/in/vayospot",
+    },
+    {
+      name: "Email",
+      icon: <IoMdMail />,
+      url: "mailto:vayospot@gmail.com",
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-3">
       <h2>Victor Ayomipo</h2>
@@ -17,18 +40,11 @@ function Hero() {
       </p>
 
       <div className="mt-5 flex gap-4">
-        <Button>
-          <IoLogoTwitter />
-        </Button>
-        <Button>
-          <IoLogoGithub />
-        </Button>
-        <Button>
-          <IoLogoLinkedin />
-        </Button>
-        <Button>
-          <IoMdMail />
-        </Button>
+        {SOCIALS.map(({ name, icon, url }) => (
+          <Button key={name} link={url}>
+            {icon}
+          </Button>
+        ))}
       </div>
 
       <div className="absolute -right-[5%] -bottom-0 h-[125%] w-[38%]">
