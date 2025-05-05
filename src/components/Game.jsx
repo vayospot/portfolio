@@ -1,7 +1,7 @@
 import GridItem from "./GridItem";
 
 function Game() {
-  return <GridItem title="Game"></GridItem>;
+  return <GridItem title=""></GridItem>;
 }
 
 export default Game;
