@@ -49,7 +49,7 @@ function Hero() {
 
       <div className="absolute -right-[5%] -bottom-0 h-[125%] w-[38%]">
         <img
-          src="/src/assets/avatar.png"
+          src="/portfolio/assets/images/avatar.png"
           alt="Victor Ayomipo"
           className="h-full w-full scale-x-[-1] object-cover object-top"
         />

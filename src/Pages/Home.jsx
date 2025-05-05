@@ -49,8 +49,8 @@ function Home() {
   return (
     <Background>
       <div className="place-contet-start grid h-10/12 w-full max-w-[1000px] grid-cols-[repeat(3,_minmax(200px,_1fr))] gap-3">
-        {gridItems.map((item) => (
-          <Glassmorphism key={item.name} className={item.className ?? ""}>
+        {gridItems.map((item, index) => (
+          <Glassmorphism key={index} className={item.className ?? ""}>
             {item.component}
           </Glassmorphism>
         ))}
