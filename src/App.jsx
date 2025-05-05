@@ -7,7 +7,7 @@ import About from "./pages/About";
 function App() {
   return (
     <Routes>
-      <Route index element={<Home />} />
+      <Route index path="/" element={<Home />} />
       <Route path="articles" element={<Articles />} />
       <Route path="projects" element={<Projects />} />
       <Route path="about" element={<About />} />
