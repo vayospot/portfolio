@@ -90,7 +90,7 @@ function DoodleIcons({ iconCount = 80, minSize = 10, maxSize = 30 }) {
   }, [iconCount, minSize, maxSize]);
 
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 overflow-hidden">
       {iconConfigs.map(({ Icon, id, style }) => (
         <Icon
           key={id}
