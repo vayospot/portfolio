@@ -18,7 +18,7 @@ function Articles() {
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="flex justify-between border-b border-neutral-500 py-0.5"
+                  className="flex justify-between border-b border-neutral-500 py-0.5 hover:border-accent"
                 >
                   <p className="font-normal">{title}</p>
                   <p className="whitespace-nowrap">

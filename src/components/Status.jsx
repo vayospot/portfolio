@@ -6,10 +6,8 @@ function Status() {
         <div className="h-3 w-3 rounded-full bg-green-400"></div>
       </div>
 
-      {/*This span should be a link that links to anything currently working on */}
-      <p>
-        Working on <span className="italic">a side project</span>
-      </p>
+      {/* If you’re working on something, just write “Working on a ???”. It can link it to what you’re working on. If you don’t want to be disturbed, status can turn red */}
+      <p>I'm here, you're here — and yes, I'm open to new roles.</p>
     </div>
   );
 }
