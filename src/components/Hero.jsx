@@ -31,15 +31,15 @@ function Hero() {
   ];
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3-x">
       <h2>Victor Ayomipo</h2>
-      <p className="max-w-[45ch]">
+      <p className="max-w-[40ch]">
         I build Mobile Apps with React Native — that's my specialty. I also
         create websites when needed and write content on the side. But mobile
         development, you'd find me there.
       </p>
 
-      <div className="mt-5 flex gap-4">
+      <div className="mt-5-x flex gap-4-x ">
         {SOCIALS.map(({ name, icon, url }) => (
           <Button key={name} link={url}>
             {icon}
@@ -47,7 +47,7 @@ function Hero() {
         ))}
       </div>
 
-      <div className="absolute -right-[5%] -bottom-0 h-[125%] w-[38%]">
+      <div className="absolute -right-[8%] -bottom-[1%] w-[25vw] max-w-[320px]">
         <img
           src="/portfolio/assets/images/avatar.png"
           alt="Victor Ayomipo"

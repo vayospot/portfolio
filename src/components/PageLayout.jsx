@@ -1,7 +1,7 @@
 function PageLayout({ children, title, className }) {
   return (
     <div
-      className={`my-15 flex w-full max-w-[80%] flex-col gap-10 ${className}`}
+      className={`gap-10-x py-14-x px-5-x flex w-full max-w-[90%] flex-col ${className}`}
     >
       <h1>{title}</h1>
 

@@ -14,27 +14,27 @@ function Home() {
   const gridItems = [
     {
       component: <Hero />,
-      className: "col-span-2",
+      className: "-order-2 min-[580px]:col-span-2 min-[580px]:order-none",
     },
     {
       component: <Connect />,
     },
     {
-      component: <About />,
-    },
-    {
       component: <Projects />,
-      className: "row-span-2",
+      className: "-order-1 min-[580px]:row-span-2 min-[580px]:order-none",
     },
     {
       component: <Status />,
+    },
+    {
+      component: <About />,
     },
     {
       component: <Articles />,
     },
     {
       component: <Game />,
-      className: "row-span-2",
+      className: "min-[580px]:row-span-2",
     },
     {
       component: <ShowerThoughts />,
@@ -45,7 +45,7 @@ function Home() {
   ];
 
   return (
-    <div className="place-contet-start grid h-10/12 w-full max-w-[1000px] grid-cols-[repeat(3,_minmax(200px,_1fr))] gap-3 self-center">
+    <div className="place-contet-start p-4-x gap-3-x grid w-full max-w-[1000px] grid-flow-dense grid-cols-1 self-center min-[580px]:grid-cols-[repeat(auto-fill,_minmax(235px,_1fr))]">
       {gridItems.map((item, index) => (
         <Glassmorphism key={index} className={item.className ?? ""}>
           {item.component}

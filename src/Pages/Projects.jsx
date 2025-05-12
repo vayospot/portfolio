@@ -4,11 +4,11 @@ import Glassmorphism from "../components/Glassmorphism";
 function Projects() {
   return (
     <PageLayout title="Projects">
-      <div className="flex flex-col gap-15">
+      <div className="gap-14-x flex flex-col">
         {PROJECTS.map(({ category, items }, index) => (
           <div key={index}>
-            <h2 className="mb-10 text-end">{category}</h2>
-            <div className="grid grid-cols-3 gap-5">
+            <h2 className="mb-10-x text-end">{category}</h2>
+            <div className="gap-5-x grid grid-cols-[repeat(auto-fill,_minmax(min(50vmin,_300px),_1fr))]">
               {items.map(({ title, description, image, url }, index) => (
                 <a
                   key={index}
@@ -17,10 +17,10 @@ function Projects() {
                   rel="noreferrer noopener"
                 >
                   <Glassmorphism className="h-full">
-                    <div className="flex h-full flex-col justify-between gap-4">
-                      <div className="flex flex-col gap-2">
+                    <div className="gap-4-x flex h-full flex-col justify-between">
+                      <div className="gap-2-x flex flex-col">
                         <p className="font-medium">{title}</p>
-                        <p className="text-sm">{description}</p>
+                        <p>{description}</p>
                       </div>
 
                       <div>

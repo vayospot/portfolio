@@ -5,20 +5,20 @@ function Articles() {
 
   return (
     <PageLayout title="Articles" className="max-w-prose">
-      <div className="flex flex-col gap-8">
+      <div className="gap-8-x flex flex-col">
         {articles.map(({ year, articles }, index) => (
-          <div key={index} className="flex gap-5">
+          <div key={index} className="gap-5-x flex">
             <div>
               <p>{year}</p>
             </div>
-            <div className="flex grow flex-col gap-4">
+            <div className="gap-4-x flex grow flex-col">
               {articles.map(({ title, date, url }, index) => (
                 <a
                   key={index}
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="flex justify-between border-b border-neutral-500 py-0.5 hover:border-accent"
+                  className="hover:border-accent py-0.5-x flex justify-between border-b border-neutral-500"
                 >
                   <p className="font-normal">{title}</p>
                   <p className="whitespace-nowrap">

@@ -2,7 +2,7 @@
 function Glassmorphism({ className, children, ...props }) {
   return (
     <div
-      className={`relative rounded-xl border border-white/15 bg-white/5 p-3 shadow-lg backdrop-blur-lg hover:border-accent ${className}`}
+      className={`rounded-5-x p-3-x hover:border-accent relative border border-white/15 bg-white/5 shadow-lg backdrop-blur-lg ${className}`}
       {...props}
     >
       {children}

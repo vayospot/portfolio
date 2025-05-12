@@ -13,7 +13,7 @@ function About() {
 
   return (
     <PageLayout title="About" className="max-w-prose">
-      <div className="flex flex-col gap-5">
+      <div className="gap-5-x flex flex-col">
         {INFO.map((info, index) => (
           <p key={index}>▪︎ {info}</p>
         ))}
