@@ -1,6 +1,6 @@
 function Status() {
   return (
-    <div className="flex h-full w-full flex-col gap-3-x">
+    <div className="gap-3-x flex h-full w-full flex-col p-5-x">
       <div className="flex items-center justify-between">
         <h2>Status</h2>
         <div className="h-3-x w-3-x rounded-full bg-green-400"></div>

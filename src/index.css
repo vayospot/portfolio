@@ -16,7 +16,7 @@ html {
   p,
   span,
   li {
-    @apply text-light text-1-x font-thin;
+    @apply text-light text-1-x font-extralight;
   }
 }
 

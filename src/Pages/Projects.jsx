@@ -3,7 +3,7 @@ import Glassmorphism from "../components/Glassmorphism";
 
 function Projects() {
   return (
-    <PageLayout title="Projects">
+    <PageLayout title="Projects" useGlassmorphism={false}>
       <div className="gap-14-x flex flex-col">
         {PROJECTS.map(({ category, items }, index) => (
           <div key={index}>

@@ -31,7 +31,7 @@ function Hero() {
   ];
 
   return (
-    <div className="flex flex-col gap-3-x">
+    <div className="gap-3-x p-5-x flex flex-col">
       <h2>Victor Ayomipo</h2>
       <p className="max-w-[40ch]">
         I build Mobile Apps with React Native — that's my specialty. I also
@@ -39,7 +39,7 @@ function Hero() {
         development, you'd find me there.
       </p>
 
-      <div className="mt-5-x flex gap-4-x ">
+      <div className="mt-5-x gap-4-x flex">
         {SOCIALS.map(({ name, icon, url }) => (
           <Button key={name} link={url}>
             {icon}

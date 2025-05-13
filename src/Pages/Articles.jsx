@@ -5,23 +5,23 @@ function Articles() {
 
   return (
     <PageLayout title="Articles" className="max-w-prose">
-      <div className="gap-8-x flex flex-col">
+      <div className="gap-10-x flex flex-col">
         {articles.map(({ year, articles }, index) => (
-          <div key={index} className="gap-5-x flex">
+          <div key={index} className="gap-6-x flex">
             <div>
-              <p>{year}</p>
+              <p className="font-thin">{year}</p>
             </div>
-            <div className="gap-4-x flex grow flex-col">
+            <div className="gap-6-x min-[580px]:gap-4-x flex grow flex-col">
               {articles.map(({ title, date, url }, index) => (
                 <a
                   key={index}
                   href={url}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="hover:border-accent py-0.5-x flex justify-between border-b border-neutral-500"
+                  className="hover:border-accent py-0.5-x gap-2-x flex justify-between border-b border-neutral-500"
                 >
-                  <p className="font-normal">{title}</p>
-                  <p className="whitespace-nowrap">
+                  <p className="font-light">{title}</p>
+                  <p className="font-thin whitespace-nowrap">
                     {new Date(date).toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",
@@ -143,22 +143,22 @@ const ARTICLES = [
   },
   {
     title: "Explaining `this` Keyword In JavaScript Like You're 5",
-    date: "2023-02-23 ",
+    date: "2023-02-23",
     url: "https://vayo.hashnode.dev/explaining-this-keyword-in-javascript-like-youre-five",
   },
   {
     title: "The Only Reason You Should Buy The Samsung Galaxy A54 5G",
-    date: "2023-03-21 ",
+    date: "2023-03-21",
     url: "https://medium.com/@vayospot/the-only-reason-you-should-buy-the-samsung-galaxy-a54-5g-7d5a10552ca6",
   },
   {
     title: "The Top 6 Samsung A Series To Buy In 2023",
-    date: "2023-04-03 ",
+    date: "2023-04-03",
     url: "https://medium.com/@vayospot/the-top-6-samsung-a-series-to-buy-in-2023-35a77a7b5325",
   },
   {
     title: "5 Popular Platforms That Aren’t Using AI — Yet",
-    date: "2023-04-06 ",
+    date: "2023-04-06",
     url: "https://medium.com/@vayospot/5-popular-platforms-that-arent-using-ai-yet-31e4859d1179",
   },
 ];

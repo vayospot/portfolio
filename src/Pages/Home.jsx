@@ -45,9 +45,13 @@ function Home() {
   ];
 
   return (
-    <div className="place-contet-start p-4-x gap-3-x grid w-full max-w-[1000px] grid-flow-dense grid-cols-1 self-center min-[580px]:grid-cols-[repeat(auto-fill,_minmax(235px,_1fr))]">
+    <div className="p-4-x gap-4-x grid w-full max-w-[1000px] grid-flow-dense grid-cols-1 self-center min-[580px]:grid-cols-[repeat(auto-fill,_minmax(235px,_1fr))]">
       {gridItems.map((item, index) => (
-        <Glassmorphism key={index} className={item.className ?? ""}>
+        <Glassmorphism
+          key={index}
+          className={item.className ?? ""}
+          style={{ padding: 0 }} // padding is handled by each grid item
+        >
           {item.component}
         </Glassmorphism>
       ))}

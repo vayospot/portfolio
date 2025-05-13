@@ -15,14 +15,14 @@ function Connect() {
   ];
 
   return (
-    <div className="flex h-full w-full flex-col gap-3-x">
+    <div className="gap-3-x p-5-x flex h-full w-full flex-col">
       <h1>
         Let's Build
         <br />
         Something
       </h1>
 
-      <div className="flex flex-col gap-3-x">
+      <div className="gap-3-x flex flex-col">
         <div>
           <p className="text-neutral-400 italic">Email</p>
           <p>vayospot@gmail.com</p>
