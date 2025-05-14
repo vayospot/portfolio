@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router";
 import Home from "./pages/home";
-import Articles from "./Pages/Articles";
+import Articles from "./pages/Articles";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
+import ShowerThoughts from "./pages/ShowerThoughts.jsx";
 import MainLayout from "./layout/MainLayout";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="articles" element={<Articles />} />
         <Route path="projects" element={<Projects />} />
         <Route path="about" element={<About />} />
+        <Route path="showerthoughts" element={<ShowerThoughts />} />
       </Route>
     </Routes>
   );

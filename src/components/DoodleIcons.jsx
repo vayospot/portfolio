@@ -16,6 +16,7 @@ import {
   IoPulseOutline,
   IoRocketOutline,
 } from "react-icons/io5";
+import shuffle from "../utils/shuffle";
 
 const ICONS = [
   IoAirplaneOutline,
@@ -42,7 +43,7 @@ function DoodleIcons({ iconCount = 80, minSize = 10, maxSize = 30 }) {
     const gridSize = Math.ceil(Math.sqrt(iconCount));
 
     // Step 1: Build all possible grid positions
-    const positions = [];
+    let positions = [];
     for (let row = 0; row < gridSize; row++) {
       for (let col = 0; col < gridSize; col++) {
         positions.push({ row, col });
@@ -50,10 +51,7 @@ function DoodleIcons({ iconCount = 80, minSize = 10, maxSize = 30 }) {
     }
 
     // Step 2: Shuffle the grid positions randomly
-    for (let i = positions.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [positions[i], positions[j]] = [positions[j], positions[i]];
-    }
+    positions = shuffle(positions);
 
     // Step 3: Take only the number of positions we need
     const selectedPositions = positions.slice(0, iconCount);

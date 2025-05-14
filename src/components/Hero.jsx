@@ -2,8 +2,8 @@ import {
   IoLogoGithub,
   IoLogoLinkedin,
   IoLogoTwitter,
-  IoMdMail,
-} from "react-icons/io";
+  IoMail,
+} from "react-icons/io5";
 import Button from "./Button";
 
 function Hero() {
@@ -25,7 +25,7 @@ function Hero() {
     },
     {
       name: "Email",
-      icon: <IoMdMail />,
+      icon: <IoMail />,
       url: "mailto:vayospot@gmail.com",
     },
   ];

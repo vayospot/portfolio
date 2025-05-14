@@ -1,4 +1,4 @@
-import { IoDownloadOutline } from "react-icons/io5";
+import { IoCloudDownloadOutline, IoDownloadOutline } from "react-icons/io5";
 
 function CheatSheet() {
   return (
@@ -11,7 +11,7 @@ function CheatSheet() {
         </div>
 
         <div className="text-2-x self-end">
-          <IoDownloadOutline />
+          <IoCloudDownloadOutline />
         </div>
       </div>
     </a>

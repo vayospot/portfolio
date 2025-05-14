@@ -4,12 +4,11 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Status from "../components/Status";
 import Articles from "../components/Articles";
-import Game from "../components/Game";
+import Lifespan from "../components/Lifespan";
 import ShowerThoughts from "../components/ShowerThoughts";
 import CheatSheet from "../components/CheatSheet";
 import Glassmorphism from "../components/Glassmorphism";
 
-// TODO: Make the grid resizable with drag just to show skills
 function Home() {
   const gridItems = [
     {
@@ -33,14 +32,14 @@ function Home() {
       component: <Articles />,
     },
     {
-      component: <Game />,
-      className: "min-[580px]:row-span-2",
-    },
-    {
-      component: <ShowerThoughts />,
+      component: <Lifespan />,
+      className: "order-last min-[580px]:row-span-2 min-[580px]:order-none",
     },
     {
       component: <CheatSheet />,
+    },
+    {
+      component: <ShowerThoughts />,
     },
   ];
 
