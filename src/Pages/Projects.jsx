@@ -27,7 +27,7 @@ function Projects() {
                         <img
                           src={image}
                           alt={title}
-                          className="w-full object-cover"
+                          className={`w-full object-cover ${category === "Mobile" ? "aspect-square" : "aspect-video"}`}
                         />
                       </div>
                     </div>
@@ -49,24 +49,16 @@ const PROJECTS = [
     category: "Mobile",
     items: [
       {
-        title: "Slacker University",
-        description:
-          "A highly responsive university website that fit all screens",
-        image: "https://placehold.co/600x400",
-        url: "https://vayospot.github.io/Slacker-University/",
+        title: "CastVote",
+        description: "A secure voting mobile app",
+        image: "/portfolio/assets/images/preview/castvote.webp",
+        url: "https://github.com/vayospot/CastVote#castvote-app",
       },
       {
-        title: "CARLONY",
-        description:
-          "A car outlet that adopts the modern design and simplicity everyone likes",
-        image: "https://placehold.co/600x400",
-        url: "https://vayospot.github.io/Carlony/",
-      },
-      {
-        title: "PETLINE",
-        description: "A pet store for everything pet related",
-        image: "https://placehold.co/600x400",
-        url: "https://vayospot.github.io/PETLINE/",
+        title: "BrukUp",
+        description: "A mobile app for Breakups",
+        image: "/portfolio/assets/images/preview/brukup.webp",
+        url: "https://github.com/vayospot/BrukUp#bruk-up-app",
       },
     ],
   },
@@ -74,10 +66,30 @@ const PROJECTS = [
     category: "Websites",
     items: [
       {
+        title: "Slacker University",
+        description:
+          "A highly responsive university website that fit all screens",
+        image: "/portfolio/assets/images/preview/slacker.webp",
+        url: "https://vayospot.github.io/Slacker-University/",
+      },
+      {
+        title: "CARLONY",
+        description:
+          "A car outlet that adopts the modern design and simplicity everyone likes",
+        image: "/portfolio/assets/images/preview/carlony.webp",
+        url: "https://vayospot.github.io/Carlony/",
+      },
+      {
+        title: "PETLINE",
+        description: "A pet store for everything pet related",
+        image: "/portfolio/assets/images/preview/petline.webp",
+        url: "https://vayospot.github.io/PETLINE/",
+      },
+      {
         title: "UNWINDCABINS",
         description:
           "A Tour website that's cloned perfectly from a figma template",
-        image: "https://placehold.co/600x400",
+        image: "/portfolio/assets/images/preview/unwind.webp",
         url: "https://vayospot.github.io/Figma-Website-Clone/",
       },
     ],
@@ -89,13 +101,13 @@ const PROJECTS = [
         title: "The Mazee",
         description:
           "A maze game that's generated using DFS algorithm. It also has the ability to solve itself.",
-        image: "https://placehold.co/600x400",
+        image: "/portfolio/assets/images/preview/mazee.webp",
         url: "https://vayospot.github.io/The-Mazee/",
       },
       {
         title: "Tic-Tac-Toe",
         description: "An unbeatable player vs computer Tic-Tac-Toe game.",
-        image: "https://placehold.co/600x400",
+        image: "/portfolio/assets/images/preview/tictactoe.webp",
         url: "https://vayospot.github.io/tic-tac-toe.github.io/",
       },
     ],
