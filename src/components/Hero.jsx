@@ -11,7 +11,7 @@ function Hero() {
     {
       name: "Twitter",
       icon: <IoLogoTwitter />,
-      url: "https://twitter.com/vayospot",
+      url: "https://x.com/vayospot",
     },
     {
       name: "Github",

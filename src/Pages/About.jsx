@@ -9,6 +9,8 @@ function About() {
     "I sleep a lot.",
     "Transformers is the greatest franchise to ever grace this planet.",
     "A bird hasn't pooped on me before — like ever.",
+    "No internet is better than extremely slow internet.",
+    "Favorite drink: Nutri-Milk.",
   ];
 
   return (

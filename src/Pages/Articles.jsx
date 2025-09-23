@@ -161,4 +161,15 @@ const ARTICLES = [
     date: "2023-04-06",
     url: "https://medium.com/@vayospot/5-popular-platforms-that-arent-using-ai-yet-31e4859d1179",
   },
+  {
+    title:
+      "CSS Cascade Layers Vs. BEM Vs. Utility Classes: Specificity Control",
+    date: "2025-06-19",
+    url: "https://www.smashingmagazine.com/2025/06/css-cascade-layers-bem-utility-classes-specificity-control/",
+  },
+  {
+    title: "Integrating CSS Cascade Layers To An Existing Project",
+    date: "2025-09-10",
+    url: "https://www.smashingmagazine.com/2025/09/integrating-css-cascade-layers-existing-project/",
+  },
 ];

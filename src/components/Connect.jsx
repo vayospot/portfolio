@@ -2,7 +2,7 @@ function Connect() {
   const SOCIALS = [
     {
       name: "Twitter",
-      url: "https://twitter.com/vayospot",
+      url: "https://x.com/vayospot",
     },
     {
       name: "Github",
