@@ -1,21 +1,6 @@
-
 # Personal Website
 
-## Demo
-
-## Design
-
-## Features
-
-## Tech Stack
-
-## Known Issues
-
-## Future Plans
-
-## Special Thanks
-
-## Contact
+Thanks for stopping by! You’re probably here for my [**PERSONAL WEBSITE**](https://vayospot.github.io/portfolio/). Go ahead...it’s all there.
 
 Feel free to reach out:
 

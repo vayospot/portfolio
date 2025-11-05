@@ -1,5 +1,6 @@
 import PageLayout from "../components/PageLayout";
 import Glassmorphism from "../components/Glassmorphism";
+import { Link } from "react-router";
 
 function Projects() {
   return (
@@ -9,31 +10,52 @@ function Projects() {
           <div key={index}>
             <h2 className="mb-10-x text-end">{category}</h2>
             <div className="gap-5-x grid grid-cols-[repeat(auto-fill,_minmax(min(50vmin,_300px),_1fr))]">
-              {items.map(({ title, description, image, url }, index) => (
-                <a
-                  key={index}
-                  href={url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
+              {items.map(({ title, description, image, url }, index) => {
+                const objectFitClass =
+                  category === "Mobile" &&
+                  title !== "CastVote" &&
+                  title !== "BrukUp"
+                    ? "object-contain" // Use object-contain for mobile apps
+                    : "object-cover"; // Use object-cover for legacy mobile and all other categories
+
+                const isMobileApp =
+                  category === "Mobile" && objectFitClass === "object-contain";
+
+                const appId = title.toLowerCase().replace(/\s/g, "");
+
+                const cardContent = (
                   <Glassmorphism className="h-full">
                     <div className="gap-4-x flex h-full flex-col justify-between">
                       <div className="gap-2-x flex flex-col">
                         <p className="font-medium">{title}</p>
                         <p>{description}</p>
                       </div>
-
                       <div>
                         <img
                           src={image}
                           alt={title}
-                          className={`w-full object-cover ${category === "Mobile" ? "aspect-square" : "aspect-video"}`}
+                          className={`w-full ${objectFitClass} ${category === "Mobile" ? "aspect-square" : "aspect-video"}`}
                         />
                       </div>
                     </div>
                   </Glassmorphism>
-                </a>
-              ))}
+                );
+
+                return isMobileApp ? (
+                  <Link key={index} to={`/showcase/${appId}`}>
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <a
+                    key={index}
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {cardContent}
+                  </a>
+                );
+              })}
             </div>
           </div>
         ))}
@@ -56,7 +78,8 @@ const PROJECTS = [
       },
       {
         title: "SnippetFuse",
-        description: "A VSCode extension to easily package code snippets for AI chatbots",
+        description:
+          "A VSCode extension to easily package code snippets for AI chatbots",
         image: "/portfolio/assets/images/preview/snippetfuse.webp",
         url: "https://marketplace.visualstudio.com/items?itemName=vayospot.snippetfuse",
       },
@@ -65,6 +88,12 @@ const PROJECTS = [
   {
     category: "Mobile",
     items: [
+      {
+        title: "DishSpot",
+        description: "A food discovery app to help you decide what to eat next",
+        image: "/portfolio/assets/images/preview/dishspot.webp",
+        url: "https://github.com/vayospot/DishSpot",
+      },
       {
         title: "CastVote",
         description: "A secure voting mobile app",

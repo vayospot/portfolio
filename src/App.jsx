@@ -5,6 +5,7 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import ShowerThoughts from "./pages/ShowerThoughts.jsx";
 import MainLayout from "./layout/MainLayout";
+import MobileAppShowcase from "./pages/Showcase.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="about" element={<About />} />
         <Route path="showerthoughts" element={<ShowerThoughts />} />
+        <Route path="showcase/:appId" element={<MobileAppShowcase />} />
       </Route>
     </Routes>
   );
