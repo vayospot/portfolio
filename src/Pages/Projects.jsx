@@ -10,7 +10,7 @@ function Projects() {
           <div key={index}>
             <h2 className="mb-10-x text-end">{category}</h2>
             <div className="gap-5-x grid grid-cols-[repeat(auto-fill,_minmax(min(50vmin,_300px),_1fr))]">
-              {items.map(({ title, description, image, url }, index) => {
+              {items.map(({ title, slug, description, image, url }, index) => {
                 const objectFitClass =
                   category === "Mobile" &&
                   title !== "CastVote" &&
@@ -21,7 +21,7 @@ function Projects() {
                 const isMobileApp =
                   category === "Mobile" && objectFitClass === "object-contain";
 
-                const appId = title.toLowerCase().replace(/\s/g, "");
+                const appId = slug || title.toLowerCase().replace(/\s/g, "");
 
                 const cardContent = (
                   <Glassmorphism className="h-full">
@@ -89,10 +89,18 @@ const PROJECTS = [
     category: "Mobile",
     items: [
       {
+        title: "Neo Robot",
+        slug: "neo-robot",
+        description:
+          "An app to interact with Neo, a humanoid robot and view its live feed",
+        image: "/portfolio/assets/images/preview/neo-robot.webp",
+        url: "https://github.com/vayospot/neo-robot",
+      },
+      {
         title: "DishSpot",
         description: "A food discovery app to help you decide what to eat next",
         image: "/portfolio/assets/images/preview/dishspot.webp",
-        url: "https://github.com/vayospot/DishSpot",
+        url: "https://github.com/vayospot/dishSpot",
       },
       {
         title: "CastVote",
