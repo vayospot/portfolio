@@ -11,6 +11,8 @@ function About() {
     "A bird hasn't pooped on me before — like ever.",
     "No internet is better than extremely slow internet.",
     "Favorite drink: Nutri-Milk.",
+    "I really cherish keeping memories... a lot.",
+    `Grok once called me "you idiot"`,
   ];
 
   return (
