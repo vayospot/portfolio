@@ -6,6 +6,7 @@ import About from "./pages/About";
 import ShowerThoughts from "./pages/ShowerThoughts.jsx";
 import MainLayout from "./layout/MainLayout";
 import MobileAppShowcase from "./pages/Showcase.jsx";
+import AllShowcases from "./pages/AllShowcases.jsx";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
         <Route index path="/" element={<Home />} />
         <Route path="articles" element={<Articles />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="projects/:categoryId" element={<Projects />} />
         <Route path="about" element={<About />} />
         <Route path="showerthoughts" element={<ShowerThoughts />} />
+        <Route path="showcase" element={<AllShowcases />} />
         <Route path="showcase/:appId" element={<MobileAppShowcase />} />
       </Route>
     </Routes>

@@ -1,64 +1,92 @@
+import { useEffect } from "react";
 import PageLayout from "../components/PageLayout";
 import Glassmorphism from "../components/Glassmorphism";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
 
 function Projects() {
+  const { categoryId } = useParams();
+
+  useEffect(() => {
+    // Scroll to the section based on the category ID
+    if (categoryId) {
+      requestAnimationFrame(() => {
+        const element = document.getElementById(categoryId.toLowerCase());
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    }
+  }, [categoryId]);
+
   return (
     <PageLayout title="Projects" useGlassmorphism={false}>
       <div className="gap-14-x flex flex-col">
-        {PROJECTS.map(({ category, items }, index) => (
-          <div key={index}>
-            <h2 className="mb-10-x text-end">{category}</h2>
-            <div className="gap-5-x grid grid-cols-[repeat(auto-fill,_minmax(min(50vmin,_300px),_1fr))]">
-              {items.map(({ title, slug, description, image, url }, index) => {
-                const objectFitClass =
-                  category === "Mobile" &&
-                  title !== "CastVote" &&
-                  title !== "BrukUp"
-                    ? "object-contain" // Use object-contain for mobile apps
-                    : "object-cover"; // Use object-cover for legacy mobile and all other categories
+        {PROJECTS.map(({ category, items }, index) => {
+          // Generate ID for sections based on the category name
+          const sectionId = category.toLowerCase();
 
-                const isMobileApp =
-                  category === "Mobile" && objectFitClass === "object-contain";
+          return (
+            <div key={index} id={sectionId} className="scroll-mt-10-x">
+              <Link to={`/projects/${sectionId}`}>
+                <h2 className="mb-10-x hover:text-accent block text-end transition-colors duration-200">
+                  {category}
+                </h2>
+              </Link>
+              <div className="gap-5-x grid grid-cols-[repeat(auto-fill,_minmax(min(50vmin,_300px),_1fr))]">
+                {items.map(
+                  ({ title, slug, description, image, url }, index) => {
+                    const objectFitClass =
+                      category === "Mobile" &&
+                      title !== "CastVote" &&
+                      title !== "BrukUp"
+                        ? "object-contain" // Use object-contain for mobile apps
+                        : "object-cover"; // Use object-cover for legacy mobile and all other categories
 
-                const appId = slug || title.toLowerCase().replace(/\s/g, "");
+                    const isMobileApp =
+                      category === "Mobile" &&
+                      objectFitClass === "object-contain";
 
-                const cardContent = (
-                  <Glassmorphism className="h-full">
-                    <div className="gap-4-x flex h-full flex-col justify-between">
-                      <div className="gap-2-x flex flex-col">
-                        <p className="font-medium">{title}</p>
-                        <p>{description}</p>
-                      </div>
-                      <div>
-                        <img
-                          src={image}
-                          alt={title}
-                          className={`w-full ${objectFitClass} ${category === "Mobile" ? "aspect-square" : "aspect-video"}`}
-                        />
-                      </div>
-                    </div>
-                  </Glassmorphism>
-                );
+                    const appId =
+                      slug || title.toLowerCase().replace(/\s/g, "");
 
-                return isMobileApp ? (
-                  <Link key={index} to={`/showcase/${appId}`}>
-                    {cardContent}
-                  </Link>
-                ) : (
-                  <a
-                    key={index}
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    {cardContent}
-                  </a>
-                );
-              })}
+                    const cardContent = (
+                      <Glassmorphism className="h-full">
+                        <div className="gap-4-x flex h-full flex-col justify-between">
+                          <div className="gap-2-x flex flex-col">
+                            <p className="font-medium">{title}</p>
+                            <p>{description}</p>
+                          </div>
+                          <div>
+                            <img
+                              src={image}
+                              alt={title}
+                              className={`w-full ${objectFitClass} ${category === "Mobile" ? "aspect-square" : "aspect-video"}`}
+                            />
+                          </div>
+                        </div>
+                      </Glassmorphism>
+                    );
+
+                    return isMobileApp ? (
+                      <Link key={index} to={`/showcase/${appId}`}>
+                        {cardContent}
+                      </Link>
+                    ) : (
+                      <a
+                        key={index}
+                        href={url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        {cardContent}
+                      </a>
+                    );
+                  },
+                )}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </PageLayout>
   );
