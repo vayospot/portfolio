@@ -31,6 +31,33 @@ html {
   --color-light: #eaeaea;
   --color-accent: #84cc16;
 
+  --animate-breathe: breathe 4s ease-in-out infinite;
+  --animate-shimmer: shimmer 6s infinite;
+
+  @keyframes breathe {
+    0%,
+    100% {
+      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+      border-color: rgba(132, 204, 22, 0.5);
+      box-shadow: 0 0 24px -4px rgba(132, 204, 22, 0.4);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-150%) skewX(-15deg);
+    }
+    20%,
+    100% {
+      transform: translateX(400%) skewX(-15deg);
+    }
+  }
+
   /* Font Sizes → text-* */
   --text-0.5-x: min(4.4vmin, 0.8rem); /* Small text */
   --text-0.5-x--line-height: calc(1.2 / 0.8);

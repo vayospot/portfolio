@@ -23,6 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
+# reference only, not needed in repo
+.clinerules/
+.docs/
+memory-bank/
+
 # Personal
 TODO.md
 cheatsheet.md

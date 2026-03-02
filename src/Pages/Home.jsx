@@ -20,7 +20,8 @@ function Home() {
     },
     {
       component: <Projects />,
-      className: "-order-1 min-[580px]:row-span-2 min-[580px]:order-none",
+      className:
+        "-order-1 min-[580px]:row-span-2 min-[580px]:order-none overflow-hidden animate-breathe hover:animate-none hover:border-accent hover:shadow-[0_0_24px_-4px_rgba(132,204,22,0.6)]",
     },
     {
       component: <Status />,
