@@ -99,10 +99,16 @@ const PROJECTS = [
     category: "Saas",
     items: [
       {
-        title: "PostHint",
-        description: "A new way to grow on 𝕏 (Twitter)",
-        image: "/portfolio/assets/images/preview/posthint.webp",
-        url: "https://posthint.net",
+        title: "Fastary",
+        description: "Replace 10+ Chrome extensions with one shortcut",
+        image: "/portfolio/assets/images/preview/fastary.webp",
+        url: "https://fastary.com",
+      },
+      {
+        title: "SpeedPaint App",
+        description: "Turn images into whiteboard-style speed paint animations",
+        image: "/portfolio/assets/images/preview/speedpaintapp.webp",
+        url: "https://speedpaintapp.pages.dev",
       },
       {
         title: "SnippetFuse",
@@ -110,6 +116,12 @@ const PROJECTS = [
           "A VSCode extension to easily package code snippets for AI chatbots",
         image: "/portfolio/assets/images/preview/snippetfuse.webp",
         url: "https://marketplace.visualstudio.com/items?itemName=vayospot.snippetfuse",
+      },
+      {
+        title: "PostHint",
+        description: "A new way to grow on 𝕏 (Twitter)",
+        image: "/portfolio/assets/images/preview/posthint.webp",
+        url: "https://posthint.net",
       },
     ],
   },
